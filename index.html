@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buon Compleanno Nadia!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page first-page" id="firstPage">
+        <div class="confetti-container"></div>
+        <div class="birthday-box" id="birthdayBox">
+            <h1>Buon Compleanno alla <br>super-mamma-nonna-Nadia!</h1>
+            <div class="gift-container">
+                <img src="gift.png" alt="Regalo" class="gift-image" id="giftImage">
+                <p class="click-instruction">Apri il regalo cliccando!</p>
+            </div>
+        </div>
+        <div class="click-message" id="clickMessage">
+            Clicca! Clicca!
+        </div>
+        <img src="mamma.webp" alt="Mamma" class="mamma-image" id="mammaImage">
+    </div>
+
+    <script>
+        let clicks = 0;
+        const birthdayBox = document.getElementById('birthdayBox');
+        const giftImage = document.getElementById('giftImage');
+        const clickMessage = document.getElementById('clickMessage');
+        const mammaImage = document.getElementById('mammaImage');
+
+        // Create confetti elements
+        const confettiContainer = document.querySelector('.confetti-container');
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDelay = Math.random() * 3 + 's';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confettiContainer.appendChild(confetti);
+        }
+
+        birthdayBox.addEventListener('click', () => {
+            clicks++;
+            giftImage.style.transform = `scale(${1 + (clicks * 0.15)})`;
+            
+            if (clicks === 3) {
+                clickMessage.classList.add('show');
+                mammaImage.classList.add('show');
+            }
+            
+            if (clicks >= 10) {
+                window.location.href = 'poem.html';
+            }
+        });
+    </script>
+</body>
+</html>

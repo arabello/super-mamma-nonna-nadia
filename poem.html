@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poesia per Nadia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Update Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page second-page">
+        <div class="poem-container">
+            <!-- Add gift voucher -->
+            <div class="gift-voucher">
+                <div class="voucher-content">
+                    <div class="voucher-header">
+                        <h2>Buono Regalo</h2>
+                        <div class="voucher-value">🎁</div>
+                    </div>
+                    <div class="voucher-body">
+                        <p class="voucher-recipient">Per: Nadia</p>
+                        <p class="voucher-description">Questo buono è valido per</p>
+                        <p class="voucher-item">Un Paio di Scarpe da Ginnastica</p>
+                        <p class="voucher-note">Per mantenerti in forma con stile!</p>
+                    </div>
+                    <div class="voucher-footer">
+                        <p class="voucher-date">14 Febbraio 2025</p>
+                        <div class="voucher-stamp">✓</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem">
+                <p>
+                    Carissima Nadia, mamma e super nonna adorata,<br>
+                    da papà, dal figlio e dalla figlia, la gioia è proclamata!<br>
+                    In cucina regni sovrana, con ricette sempre squisite,<br>
+                    e il nipotino Alessandro ti adora con affetto senza fine.
+                </p>
+                <p>
+                    Con le carte sempre in mano, vinci sorrisi e compagnia,<br>
+                    mentre al Centro Sociale Boschi si accende la tua magia.<br>
+                    La tua voce, dolce canto, risuona in ogni cuore,<br>
+                    facendo danzare i sogni con note piene d'amore.
+                </p>
+                <p>
+                    Oggi il dono è speciale, con un pizzico di ironia:<br>
+                    questo biglietto vale per scarpe da ginnastica, per una corsa in libertà!<br>
+                    Così potrai muoverti libera, leggera come una stella,<br>
+                    seguendo il ritmo della vita, rendendola sempre più bella.
+                </p>
+                <p>
+                    Buon compleanno, cara Nadia, che la festa sia un incanto,<br>
+                    con l'affetto di chi ti ama tanto, in ogni istante e in ogni canto!
+                </p>
+            </div>
+            <div class="signatures">
+                <p>Matteo, Marco, Alessandro, Martina, Luigi</p>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="./video.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add fade-in effect when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+
+        // Prevent going back to index if already completed
+        if (!localStorage.getItem('birthdayClicks')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html> 
